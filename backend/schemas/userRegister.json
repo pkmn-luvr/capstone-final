@@ -1,0 +1,43 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "UserRegister",
+    "type": "object",
+    "properties": {
+      "username": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 30
+      },
+      "email": {
+        "type": "string",
+        "format": "email"
+      },
+      "password": {
+        "type": "string",
+        "minLength": 5
+      },
+      "userhemisphere": {
+        "type": "string",
+        "enum": ["north", "south"]
+      },
+      "profilephoto": {
+        "type": "string",
+        "format": "uri"
+      },
+      "bio": {
+        "type": "string",
+        "maxLength": 140
+      },
+      "createdat": {
+        "type": "string",
+        "format": "date-time"
+      },
+      "updatedat": {
+        "type": "string",
+        "format": "date-time"
+      }
+    },
+    "required": ["username", "email", "password", "userhemisphere"],
+    "additionalProperties": false
+  }
+  

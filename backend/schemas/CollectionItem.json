@@ -1,0 +1,19 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "CollectionItem",
+    "type": "object",
+    "properties": {
+      "itemname": {
+        "type": "string",
+        "minLength": 1,
+        "maxLength": 255
+      },
+      "itemtype": {
+        "type": "string",
+        "enum": ["Fish", "Fossil", "Art", "Bug", "Deep Sea Creature"]
+      }
+    },
+    "required": ["itemname", "itemtype"],
+    "additionalProperties": false
+  }
+  
